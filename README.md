@@ -1,5 +1,7 @@
-# hashom package
+# Hashom package
 
-A short description of your package.
+Provides an easy way to hash any selected string without leaving your most beloved editor.
 
-![A screenshot of your package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+# Disclaimer
+
+Project was developed as training exercise with the Atom packages API.
