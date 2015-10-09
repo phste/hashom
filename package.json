@@ -1,0 +1,18 @@
+{
+  "name": "hashom",
+  "main": "./lib/hashom",
+  "version": "0.1.0",
+  "description": "Allows to hash the selected text",
+  "keywords": [
+  ],
+  "activationCommands": {
+  },
+  "repository": "https://github.com/atom/hashom",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "jshashes" : ">=1.0.5"
+  }
+}

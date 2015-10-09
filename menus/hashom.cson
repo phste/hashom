@@ -1,0 +1,22 @@
+# See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
+'context-menu':
+  'atom-text-editor': [
+    {
+      'label': 'MD5'
+      'command': 'hashom:MD5'
+    }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'hashom'
+      'submenu': [
+        {
+          'label': 'TMD5'
+          'command': 'hashom:MD5'
+        }
+      ]
+    ]
+  }
+]
