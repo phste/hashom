@@ -2,19 +2,48 @@
 'context-menu':
   'atom-text-editor': [
     {
-      'label': 'MD5'
-      'command': 'hashom:MD5'
+      'label': 'Hashom',
+      'submenu': [
+        {
+          'label': 'MD5'
+          'command': 'hashom:MD5'
+        },
+        {
+          'label': 'SHA1'
+          'command': 'hashom:SHA1'
+        },
+        {
+          'label': 'SHA256'
+          'command': 'hashom:SHA256'
+        },
+        {
+          'label': 'SHA512'
+          'command': 'hashom:SHA512'
+        }
+      ]
     }
   ]
 'menu': [
   {
     'label': 'Packages'
     'submenu': [
-      'label': 'hashom'
+      'label': 'Hashom'
       'submenu': [
         {
-          'label': 'TMD5'
+          'label': 'MD5'
           'command': 'hashom:MD5'
+        },
+        {
+          'label': 'SHA1'
+          'command': 'hashom:SHA1'
+        },
+        {
+          'label': 'SHA256'
+          'command': 'hashom:SHA256'
+        },
+        {
+          'label': 'SHA512'
+          'command': 'hashom:SHA512'
         }
       ]
     ]

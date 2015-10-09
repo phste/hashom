@@ -11,6 +11,9 @@ module.exports = Hashom =
     @subscriptions = new CompositeDisposable
     @subscriptions.add atom.commands.add 'atom-workspace',
       'hashom:MD5': => @md5()
+      'hashom:SHA1': => @sha1(),
+      'hashom:SHA256': => @sha256(),
+      'hashom:SHA512': => @sha512(),
   deactivate: ->
     @subscriptions.dispose()
 
@@ -24,3 +27,12 @@ module.exports = Hashom =
 
   md5: ->
     @hash(new Hashes.MD5())
+
+  sha1: ->
+    @hash(new Hashes.SHA1())
+
+  sha256: ->
+    @hash(new Hashes.SHA256())
+
+  sha512: ->
+    @hash(new Hashes.SHA512())
