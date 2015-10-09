@@ -1,5 +1,5 @@
 {CompositeDisposable} = require 'atom'
-Hashes = require('jshashes')
+CryptoJS = require('crypto-js')
 
 module.exports = Hashom =
   hashomView: null
@@ -22,17 +22,18 @@ module.exports = Hashom =
       selection = editor.getLastSelection()
       selectedText = selection.getText()
       if selectedText != ''
-        hashedText = hashFunction.hex(selectedText)
+        console.log(hashFunction)
+        hashedText = hashFunction(selectedText).toString(CryptoJS.enc.Hex);
         selection.insertText(hashedText)
 
   md5: ->
-    @hash(new Hashes.MD5())
+    @hash(CryptoJS.MD5)
 
   sha1: ->
-    @hash(new Hashes.SHA1())
+    @hash(CryptoJS.SHA1)
 
   sha256: ->
-    @hash(new Hashes.SHA256())
+    @hash(CryptoJS.SHA256)
 
   sha512: ->
-    @hash(new Hashes.SHA512())
+    @hash(CryptoJS.SHA512)
